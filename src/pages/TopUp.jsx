@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ArrowLeft, TrendingUp, Wallet, AlertCircle, Zap, CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-const NOMINALS = [50000, 100000, 150000, 200000, 300000, 500000];
+const NOMINALS = [10000, 100000, 150000, 200000, 300000, 500000];
 
 const formatRupiah = (value) => new Intl.NumberFormat("id-ID").format(value);
 
@@ -11,7 +11,7 @@ export default function TopUp() {
   const [amount, setAmount] = useState("");
   const [note, setNote] = useState("");
   const [focusedField, setFocusedField] = useState("");
-  const MIN_TOPUP = 50000;
+  const MIN_TOPUP = 10000;
 
   const numericAmount = Number(amount || 0);
   const isValidAmount = numericAmount >= MIN_TOPUP;
